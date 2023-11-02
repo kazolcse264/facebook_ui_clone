@@ -26,9 +26,9 @@ class CustomAppBar extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       height: 65.0,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
-        boxShadow: const [
+        boxShadow: [
           BoxShadow(
             color: Colors.black12,
             offset: Offset(0, 2),
@@ -39,10 +39,10 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Expanded(
+          const Expanded(
             child: Text(
               'facebook',
-              style: const TextStyle(
+              style: TextStyle(
                 color: Palette.facebookBlue,
                 fontSize: 32.0,
                 fontWeight: FontWeight.bold,
@@ -50,7 +50,7 @@ class CustomAppBar extends StatelessWidget {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             height: double.infinity,
             width: 600.0,
             child: CustomTabBar(
@@ -69,12 +69,12 @@ class CustomAppBar extends StatelessWidget {
                 CircleButton(
                   icon: Icons.search,
                   iconSize: 30.0,
-                  onPressed: () => print('Search'),
+                  onPressed: () {},
                 ),
                 CircleButton(
                   icon: MdiIcons.facebookMessenger,
                   iconSize: 30.0,
-                  onPressed: () => print('Messenger'),
+                  onPressed: () {},
                 ),
               ],
             ),

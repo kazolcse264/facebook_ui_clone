@@ -40,18 +40,18 @@ class PostContainer extends StatelessWidget {
                   _PostHeader(post: post),
                   const SizedBox(height: 4.0),
                   Text(post.caption),
-                  post.imageUrl != null
-                      ? const SizedBox.shrink()
-                      : const SizedBox(height: 6.0),
+               /*   post.imageUrl != null
+                      ?*/ const SizedBox.shrink()
+                      /*: const SizedBox(height: 6.0)*/,
                 ],
               ),
             ),
-            post.imageUrl != null
-                ? Padding(
+         /*   post.imageUrl != null
+                ?*/ Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8.0),
                     child: CachedNetworkImage(imageUrl: post.imageUrl),
                   )
-                : const SizedBox.shrink(),
+                /*: const SizedBox.shrink()*/,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: _PostStats(post: post),
@@ -108,7 +108,7 @@ class _PostHeader extends StatelessWidget {
         ),
         IconButton(
           icon: const Icon(Icons.more_horiz),
-          onPressed: () => print('More'),
+          onPressed: () {},
         ),
       ],
     );
@@ -131,7 +131,7 @@ class _PostStats extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.all(4.0),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Palette.facebookBlue,
                 shape: BoxShape.circle,
               ),
@@ -175,7 +175,7 @@ class _PostStats extends StatelessWidget {
                 size: 20.0,
               ),
               label: 'Like',
-              onTap: () => print('Like'),
+              onTap: () {},
             ),
             _PostButton(
               icon: Icon(
@@ -184,7 +184,7 @@ class _PostStats extends StatelessWidget {
                 size: 20.0,
               ),
               label: 'Comment',
-              onTap: () => print('Comment'),
+              onTap: () {},
             ),
             _PostButton(
               icon: Icon(
@@ -193,7 +193,7 @@ class _PostStats extends StatelessWidget {
                 size: 25.0,
               ),
               label: 'Share',
-              onTap: () => print('Share'),
+              onTap: () {},
             )
           ],
         ),

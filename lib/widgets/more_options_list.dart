@@ -26,7 +26,7 @@ class MoreOptionsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(maxWidth: 280.0),
+      constraints: const BoxConstraints(maxWidth: 280.0),
       child: ListView.builder(
         itemCount: 1 + _moreOptionsList.length,
         itemBuilder: (BuildContext context, int index) {
@@ -66,7 +66,7 @@ class _Option extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => print(label),
+      onTap: () {},
       child: Row(
         children: [
           Icon(icon, size: 38.0, color: color),

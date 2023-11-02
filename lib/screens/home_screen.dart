@@ -15,8 +15,10 @@ import '../widgets/rooms.dart';
 import '../widgets/stories.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -75,12 +77,12 @@ class _HomeScreenMobile extends StatelessWidget {
             CircleButton(
               icon: Icons.search,
               iconSize: 30.0,
-              onPressed: () => print('Search'),
+              onPressed: () {},
             ),
             CircleButton(
               icon: MdiIcons.facebookMessenger,
               iconSize: 30.0,
-              onPressed: () => print('Messenger'),
+              onPressed: () {},
             ),
           ], systemOverlayStyle: SystemUiOverlayStyle.dark,
         ),
@@ -128,18 +130,18 @@ class _HomeScreenDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Flexible(
+        const Flexible(
           flex: 2,
           child: Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: const EdgeInsets.all(12.0),
+              padding: EdgeInsets.all(12.0),
               child: MoreOptionsList(currentUser: currentUser),
             ),
           ),
         ),
         const Spacer(),
-        Container(
+        SizedBox(
           width: 600.0,
           child: CustomScrollView(
             controller: scrollController,
@@ -153,7 +155,7 @@ class _HomeScreenDesktop extends StatelessWidget {
                   ),
                 ),
               ),
-              SliverToBoxAdapter(
+              const SliverToBoxAdapter(
                 child: CreatePostContainer(currentUser: currentUser),
               ),
               SliverPadding(

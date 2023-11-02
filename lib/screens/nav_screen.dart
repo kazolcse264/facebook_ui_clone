@@ -8,18 +8,20 @@ import '../widgets/responsive.dart';
 import 'home_screen.dart';
 
 class NavScreen extends StatefulWidget {
+  const NavScreen({super.key});
+
   @override
-  _NavScreenState createState() => _NavScreenState();
+  State<NavScreen> createState() => _NavScreenState();
 }
 
 class _NavScreenState extends State<NavScreen> {
   final List<Widget> _screens = [
-    HomeScreen(),
-    Scaffold(),
-    Scaffold(),
-    Scaffold(),
-    Scaffold(),
-    Scaffold(),
+    const HomeScreen(),
+    const Scaffold(),
+    const Scaffold(),
+    const Scaffold(),
+    const Scaffold(),
+    const Scaffold(),
   ];
   final List<IconData> _icons = const [
     Icons.home,

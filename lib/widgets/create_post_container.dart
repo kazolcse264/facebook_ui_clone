@@ -30,7 +30,7 @@ class CreatePostContainer extends StatelessWidget {
               children: [
                 ProfileAvatar(imageUrl: currentUser.imageUrl),
                 const SizedBox(width: 8.0),
-                Expanded(
+                const Expanded(
                   child: TextField(
                     decoration: InputDecoration.collapsed(
                       hintText: 'What\'s on your mind?',
@@ -40,40 +40,39 @@ class CreatePostContainer extends StatelessWidget {
               ],
             ),
             const Divider(height: 10.0, thickness: 0.5),
-            Container(
+            SizedBox(
               height: 40.0,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   TextButton.icon(
                     onPressed: () {
-                      // Add your onPressed logic here
-                      print('Live');
+
                     },
                     icon: const Icon(
                       Icons.videocam,
                       color: Colors.red,
                     ),
-                    label: Text('Live'),
+                    label: const Text('Live'),
                   ),
 
                   const VerticalDivider(width: 8.0),
                   TextButton.icon(
-                    onPressed: () => print('Photo'),
+                    onPressed: (){},
                     icon: const Icon(
                       Icons.photo_library,
                       color: Colors.green,
                     ),
-                    label: Text('Photo'),
+                    label: const Text('Photo'),
                   ),
                   const VerticalDivider(width: 8.0),
                   TextButton.icon(
-                    onPressed: () => print('Room'),
+                    onPressed: () {},
                     icon: const Icon(
                       Icons.video_call,
                       color: Colors.purpleAccent,
                     ),
-                    label: Text('Room'),
+                    label: const Text('Room'),
                   )
 
                 ],

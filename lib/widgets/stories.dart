@@ -102,7 +102,7 @@ class _StoryCard extends StatelessWidget {
               ? Container(
                   height: 40.0,
                   width: 40.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.circle,
                   ),
@@ -111,7 +111,7 @@ class _StoryCard extends StatelessWidget {
                     icon: const Icon(Icons.add),
                     iconSize: 30.0,
                     color: Palette.facebookBlue,
-                    onPressed: () => print('Add to Story'),
+                    onPressed: () {},
                   ),
                 )
               : ProfileAvatar(
