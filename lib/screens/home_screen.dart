@@ -84,7 +84,7 @@ class _HomeScreenMobile extends StatelessWidget {
             ),
           ], systemOverlayStyle: SystemUiOverlayStyle.dark,
         ),
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: CreatePostContainer(currentUser: currentUser),
         ),
         SliverPadding(
